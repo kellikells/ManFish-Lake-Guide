@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Lake Guide for Fishing</title>
 
     <!-- reset css -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -26,6 +26,175 @@
 </head>
 
 <body>
+
+    <div class="container">
+
+        <!-- HEADER  -->
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">ManFish Lake Guide</h1>
+                        <p class="lead">current weather & lake information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- input & submit zipcode  -->
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="input-group mb-3">
+                    <input id="zipCodeInput" type="text" class="form-control" placeholder="zipcode" aria-label="zipcode"
+                        aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button id="weatherSubmit" class="btn btn-outline-secondary" type="button"
+                            id="button-addon2">Weather!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEATHER : results from input-->
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <div class="card-deck">
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Current Weather:</h5>
+                            <p class="card-text" id="maxTemp"></p>
+                            <p class="card-text" id="minTemp"></p>
+                            <p class="card-text" id="description"></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Tomorrow:</h5>
+                            <p class="card-text" id="fcMaxTemp"></p>
+                            <p class="card-text" id="fcMinTemp"></p>
+                            <p class="card-text" id="fcDescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Lake  -->
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="assets/images/lake-balboa.png" class="card-img" alt="Lake Balboa">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lake Balboa</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lake  -->
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="assets/images/lake-matthews.png" class="card-img" alt="Lake Matthews">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lake Matthews</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lake  -->
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="assets/images/lake-perris.png" class="card-img" alt="Lake Perris">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lake Perris</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lake  -->
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="assets/images/lake-elsinore.png" class="card-img" alt="Lake Elsinore">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Lake Elsinore</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lake  -->
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="assets/images/silverwood-lake.png" class="card-img" alt="Silverwood Lakke">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Silverwood Lake</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                </p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
 
 
     <!-- Link to jQuery  -->
