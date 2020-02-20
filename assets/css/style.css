@@ -57,3 +57,10 @@ h1 {
     border: none;
     color: whitesmoke;
 }
+
+/* lake temperature display */
+#fixedLakeTemp {
+    position: fixed;
+    bottom: 500px;
+    right: -10px;
+}

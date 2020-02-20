@@ -1,9 +1,7 @@
 
 const zipcodeForecastAPIkey = "7c503c0e58d64fcc85af4093549c4a07";
 let zipcode = 0;
-let apiCall;    // === repeated: delete when merge
-
-
+let apiCall;
 
 
 // function that returns an object "apiCall" 
@@ -17,7 +15,8 @@ function getApiCallObj(url) {
     return apiCall;    // this is the object we give ajax 
 }
 
-//                 2 day forecast by zipcode
+//=======================================================
+//            2 day forecast by zipcode
 //=======================================================
 function submitForecast() {
     zipcode = parseInt($("#zipCodeInput").val().trim());
@@ -58,7 +57,6 @@ function submitForecast() {
         fcDescription = forecastArray[1].weather.description;
         fcMaxTemp = forecastArray[1].app_max_temp;
         fcMinTemp = forecastArray[1].app_min_temp;
-
         console.log(fcDate, fcDescription, fcMaxTemp, fcMinTemp);
 
         // --- transfer data to HTML ---
@@ -71,7 +69,6 @@ function submitForecast() {
     });
 }
 
-
 // function for submit user input
 $("#weatherSubmit").on("click", function (event) {
     event.preventDefault();
@@ -79,3 +76,42 @@ $("#weatherSubmit").on("click", function (event) {
 });
 
 
+// ======================================================================
+//                      image weather:
+// ======================================================================
+
+const zipcodeAPIkey = "4d6325b46142f4a1f02bbd88590a9736";
+let imageZipcode = 0;
+let clickedImage;
+
+$(".lake").on("click", function () {
+
+    // ---- put selected lake: lake name to DOM --------
+    clickedImage = $("#lakeName").text(this.name);
+    console.log(clickedImage);
+
+    // getting the value from html 
+    imageZipcode = parseInt(this.value);
+    console.log(imageZipcode);
+
+    // putting zipcode into url for function getApiCallObj();
+    // parameter units=imperial (F) | =metric (C) | default returns Kelvin
+    let zipCodeURL =
+        "https://api.openweathermap.org/data/2.5/weather?zip=" +
+        imageZipcode +
+        ",us&units=imperial&appid=" +
+        zipcodeAPIkey;
+
+    getApiCallObj(zipCodeURL);
+
+    $.ajax(apiCall).then(function (response) {
+        console.log(response);
+
+        // -----  attaching response data to HTML --------
+        let temperature = $("#zipCodeTemperature").text(response.main.temp);
+        let description = $("#zipCodeDescription").text(
+            response.weather[0].main);
+        console.log(temperature);
+        console.log(description);
+    });
+});
