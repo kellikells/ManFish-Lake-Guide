@@ -64,7 +64,7 @@
         </div>
 
         <!-- WEATHER : results from input-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  sticky-top ">
             <div class="col-7">
                 <div class="card-deck">
                     <div class="card weatherCard">
@@ -87,9 +87,17 @@
                             <p class="card-text" id="fcDescription"></p>
                         </div>
                     </div>
+                    <div class="card-body result">
+                        <h5 class="card-title" id="lakeName"></h5>
+                        <p class="card-text " id="zipCodeTemperature"></p>
+                        <p class="card-text" id="zipCodeDescription"></p>
+                    </div>
                 </div>
             </div>
         </div>
+        <br>
+        <!-- weather for clicked lake  -->
+
 
         <br>
 
@@ -129,13 +137,11 @@
 
             <!------------------ DISPLAY FOR WEATHER OF LAKE SELECTED  ------------------------->
             <!-- ============================================================================ -->
-            <div class="col-4" id="fixedLakeTemp">
-                    <!-- <p class="card-text " id="lakeName"></p> -->
-                <h6  id="lakeName"></h6>
+            <!-- <div class="col-4" id="fixedLakeTemp">
+                <h6 id="lakeName"></h6>
                 <p class="card-text " id="zipCodeTemperature"></p>
                 <p class="card-text" id="zipCodeDescription"></p>
-
-            </div>
+            </div> -->
         </div>
 
         <!--------------- Lake  ------------------------------------------------------->
@@ -146,7 +152,7 @@
                 <div class="card mb-3 " style="max-width: 540px; ">
                     <div class="row no-gutters ">
                         <div class="col-md-4 ">
-                            <button class="lake" value="92570">
+                            <button class="lake" value="92570" name="Lake Matthews">
                                 <img src="assets/images/lake-matthews.png " class="card-img" alt="Lake Matthews " />
                             </button>
                         </div>
@@ -188,7 +194,7 @@
                 <div class="card mb-3 " style="max-width: 540px; ">
                     <div class="row no-gutters ">
                         <div class="col-md-4 ">
-                            <button class="lake">
+                            <button class="lake" value="92570" name="Lake Perris">
                                 <img src="assets/images/lake-perris.png " class="card-img" alt="Lake Perris " />
                             </button>
                         </div>
@@ -214,7 +220,7 @@
                     </div>
                 </div>
             </div>
-  
+
         </div>
 
         <!--------------- Lake  ------------------------------------------------------->
@@ -225,7 +231,7 @@
                 <div class="card mb-3 " style="max-width: 540px; ">
                     <div class="row no-gutters ">
                         <div class="col-md-4 ">
-                            <button class="lake">
+                            <button class="lake" value="92530" name="Lake Elsinore">
                                 <img src="assets/images/lake-elsinore.png " class="card-img" alt="Lake Elsinore " />
                             </button>
                         </div>
@@ -266,7 +272,7 @@
                 <div class="card mb-3 " style="max-width: 540px; ">
                     <div class="row no-gutters ">
                         <div class="col-md-4 ">
-                            <button class="lake">
+                            <button class="lake" value="92345" name="Silverwood Lake">
                                 <img src="assets/images/silverwood-lake.png " class="card-img"
                                     alt="Silverwood Lakke " />
                             </button>
