@@ -1,79 +1,54 @@
 * {
-    box-sizing: border-box;
+     box-sizing: border-box;
 }
 
-
-/* background for body  */
-
-
-/* body {
-    background: ""
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+body {
+         /* background-image: url("../images/geometric-leaves.png"); */
+         background-color: #124;
+}
 
 /* ------------------------------------------*/
 
-
 /* =======  MY: OVERWRITING BOOTSTRAP ========*/
-
 
 /* my wrapper for content  */
 
 #MYcontainer {
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    background-color: #9ef;
+     padding: 20px;
+     margin-top: 10px;
+     margin-bottom: 50px;
+     background-color: #9ef;
+     border: solid 3px black;
 }
 
 #MYjumbotron {
-    padding: 20px 0 5px 0;
-    text-align: center;
-    border: double 5px white;
-    background-color: #4bc;
+     padding: 20px 0 5px 0;
+     text-align: center;
+     border: double 5px white;
+     background-color: #4bc;
 }
-
 
 /* jumbotron header  */
 
 h1 {
-    font-family: 'Rock Salt', cursive;
-    color: white;
+     font-family: "Rock Salt", cursive;
+     color: white;
 }
 
 #subhead {
-    color: whitesmoke;
-    font-family: 'Sriracha', cursive;
-    padding-top: 5px;
-    margin-top: 5px;
-    opacity: .75;
+     color: whitesmoke;
+     font-family: "Sriracha", cursive;
+     padding-top: 5px;
+     margin-top: 5px;
+     opacity: 0.75;
 }
-
 
 /* Submit button for zipcode Input  */
 
 #weatherSubmit {
-    background-color: #4bc;
-    border: none;
-    color: whitesmoke;
+     background-color: #4bc;
+     border: none;
+     color: whitesmoke;
 }
 
-/* lake temperature display */
-#fixedLakeTemp {
-    position: fixed;
-    bottom: 500px;
-    right: -10px;
-}
+
