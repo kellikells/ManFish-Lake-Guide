@@ -65,34 +65,45 @@
 
         <!-- WEATHER : results from input-->
         <div class="row justify-content-center ">
-            <div class="col-7">
+            <div class="col-9">
                 <div class="card-deck">
+
                     <div class="card weatherCard">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body result">
-                            <h5 class="card-title">
-                                Current Weather:
-                            </h5>
+                            <h5 class="card-title weather-title">Current Weather:</h5>
                             <p class="card-text" id="maxTemp"></p>
                             <p class="card-text" id="minTemp"></p>
                             <p class="card-text" id="description"></p>
+                            <div class="temperature__icon-container">
+                                <img class="current-temperature__icon" alt="">
+                            </div>
                         </div>
                     </div>
+
                     <div class="card weatherCard">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body result">
-                            <h5 class="card-title">Tomorrow:</h5>
+                            <h5 class="card-title weather-title">Tomorrow's Weather:</h5>
                             <p class="card-text" id="fcMaxTemp"></p>
                             <p class="card-text" id="fcMinTemp"></p>
                             <p class="card-text" id="fcDescription"></p>
+                            <div class="temperature__icon-container">
+                                <img class="tomorrow-temperature__icon" alt="">
+                            </div>
                         </div>
                     </div>
- 
-                    <!-- shows the results depending on lake selected  -->
-                    <div class="card-body result" id="selectedLake">
-                        <h5 class="card-title" id="lakeName"></h5>
-                        <p class="card-text " id="zipCodeTemperature"></p>
-                        <p class="card-text" id="zipCodeDescription"></p>
+
+                    <!--              results for selected lake            -->
+                    <!-- =================================================== -->
+                    <div class="card weatherCard">
+
+                        <div class="card-body result" id="selectedLake">
+                            <h5 class="card-title weather-title" id="lakeName">Selected Lake:</h5>
+                            <p class="card-text " id="zipCodeTemperature"></p>
+                            <p class="card-text" id="zipCodeDescription"></p>
+                            <!-- <div class="temperature__icon-container">
+                                <img class="lake-temperature__icon" alt="">
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>

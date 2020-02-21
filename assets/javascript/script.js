@@ -66,6 +66,8 @@ function submitForecast() {
         $("#fcMaxTemp").text(fcMaxTemp);
         $("#minTemp").text(minTemp);
         $("#fcMinTemp").text(fcMinTemp);
+        $('.current-temperature__icon').attr('src', "https://www.weatherbit.io/static/img/icons/" + forecastArray[0].weather.icon + ".png");
+        $('.tomorrow-temperature__icon').attr('src', "https://www.weatherbit.io/static/img/icons/" + forecastArray[0].weather.icon + ".png");
     });
 }
 
@@ -111,6 +113,7 @@ $(".lake").on("click", function () {
         let temperature = $("#zipCodeTemperature").text(response.main.temp);
         let description = $("#zipCodeDescription").text(
             response.weather[0].main);
+        // $('.lake-temperature__icon').attr('src', "https://www.weatherbit.io/static/img/icons/" + $(this).response.data.weather[0].icon + ".png");
         console.log(temperature);
         console.log(description);
     });
