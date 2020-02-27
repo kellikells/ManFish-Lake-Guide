@@ -4,7 +4,6 @@ let zipcode = 0;
 let apiCall;
 
 
-
 // function that returns an object "apiCall" 
 // give it a url that incorporates user's input zipcode
 //==== repeated : delete when merge 
@@ -88,7 +87,6 @@ let imageZipcode = 0;
 let clickedImage;
 
 $(".lake").on("click", function () {
-    console.log(this);
 
     // ---- put selected lake: lake name to DOM --------
     clickedImage = $("#lakeName").text(this.name);
@@ -115,11 +113,8 @@ $(".lake").on("click", function () {
         let temperature = $("#zipCodeTemperature").text(response.main.temp);
         let description = $("#zipCodeDescription").text(
             response.weather[0].main);
-            let sunset = $("#zipCodeSunset").text()
         // $('.lake-temperature__icon').attr('src', "https://www.weatherbit.io/static/img/icons/" + $(this).response.data.weather[0].icon + ".png");
         console.log(temperature);
         console.log(description);
-        let wind = $("#zipCodeWinds").text(response.wind.speed);
-        let sunset = $("#zipCodeSunset").text(response.wind.sys.sunset);
     });
 });
