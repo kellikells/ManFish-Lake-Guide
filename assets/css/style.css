@@ -56,3 +56,9 @@ h1 {
 .result {
      text-align: center;
 }
+
+
+p {
+     font-size: 2rem;
+     color: #4bc;
+}
