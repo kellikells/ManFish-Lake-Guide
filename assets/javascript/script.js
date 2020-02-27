@@ -110,11 +110,15 @@ $(".lake").on("click", function () {
         console.log(response);
 
         // -----  attaching response data to HTML --------
-        let temperature = $("#zipCodeTemperature").text(response.main.temp);
+        let temperature = $("#zipCodeTemperature").text("Current Temperature: "+ response.main.temp);
         let description = $("#zipCodeDescription").text(
             response.weather[0].main);
-        // $('.lake-temperature__icon').attr('src', "https://www.weatherbit.io/static/img/icons/" + $(this).response.data.weather[0].icon + ".png");
+        let wind = $("#zipCodeWind").text("Wind Speed: " + response.wind.speed + "mph");
+        console.log(wind);
+        // let sunset = 
+
         console.log(temperature);
+
         console.log(description);
     });
 });
