@@ -7,31 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lake Guide for Fishing</title>
 
-    <!-- reset css -->
+    <!--------------- Reset CSS -------------->
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <!-- Bootstrap CSS -->
+
+    <!--------------- Bootstrap CSS --------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
-    <!-- google fonts -->
+    <!--------------- Google fonts -------------->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Fugaz+One|Rock+Salt|Sriracha&display=swap"
         rel="stylesheet" />
 
-    <!-- Firebase Core JavaScript Link -->
+    <!--------------- Firebase Core JavaScript Link --------------->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <!-- Specific Firebase products we want (Database) -->
+    <!--------------- FIREBASE Database --------------->
+    <!--    (Specific Firebase products we want)      -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
-    <!-- jquery script -->
+    <!--------------- JQuery script --------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--MY CSS -->
+    <!--------------- MY CSS --------------->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
-    <div class="container" id="MYcontainer">
-        <!-- HEADER  -->
+
+    <!-- =========== HEADER =========== -->
+    <div class="container-fluid" id="MYcontainer">
         <div class="row">
             <div class="col">
                 <div class="jumbotron jumbotron-fluid" id="MYjumbotron">
@@ -46,8 +49,10 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- input & submit zipcode  -->
+    <!-- =========== ZIPCODE INPUT =========== -->
+    <div class="container" id="zipcodeInputContainer">
         <div class="row justify-content-center">
             <div class="col-6">
                 <div class="input-group mb-3">
@@ -59,15 +64,18 @@
                         </button>
                     </div>
                 </div>
-                `
             </div>
         </div>
+    </div>
 
-        <!-- WEATHER : results from input-->
+
+    <!-- =========== WEATHER : results from input =========== -->
+    <div class="container" id="weatherContainer">
         <div class="row justify-content-center ">
             <div class="col-9">
                 <div class="card-deck">
 
+                    <!-- ========= CURRENT WEATHER ======= -->
                     <div class="card weatherCard">
                         <div class="card-body result">
                             <h5 class="card-title weather-title">Current Weather:</h5>
@@ -80,6 +88,7 @@
                         </div>
                     </div>
 
+                    <!-- ========= TOMORROW'S WEATHER ======= -->
                     <div class="card weatherCard">
                         <div class="card-body result">
                             <h5 class="card-title weather-title">Tomorrow's Weather:</h5>
@@ -92,10 +101,8 @@
                         </div>
                     </div>
 
-                    <!--              results for selected lake            -->
-                    <!-- =================================================== -->
+                    <!-- ======== RESULTS for selected lake ======== -->
                     <div class="card weatherCard">
-
                         <div class="card-body result" id="selectedLake">
                             <h5 class="card-title weather-title" id="lakeName">Selected Lake:</h5>
                             <p class="card-text " id="zipCodeTemperature"></p>
@@ -110,204 +117,177 @@
                 </div>
             </div>
         </div>
-        <br>
-        <!-- weather for clicked lake  -->
+    </div>
+    
+    <br>
+    <!-- weather for clicked lake  -->
 
 
-        <br>
+    <br>
 
-        <!-- ================================================================================ -->
-        <!--------------- Lake  ------------------------------------------------------->
-        <!-- ================================================================================ -->
-        <div class="row">
-            <div class="col-8">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <button class="lake" value="91406" name="Lake Balboa">
-                                <img src="assets/images/lake-balboa.png" class="card-img" alt="Lake Balboa"
-                                    id="lake-balboa" />
-                            </button>
-                        </div>
-                        <div class=" col-md-8 ">
-                            <div class="card-body ">
-                                <h5 class="card-title ">
-                                    Lake Balboa
-                                </h5>
-                                <p class="card-text ">
-                                    Fish: Largemouth bass, Common
-                                    carp, Channel catfish
-                                </p>
-                                <p class="card-text ">
-                                    <small class="text-muted ">San Fernando Valley |
-                                        Open Everyday: sunrise to
-                                        sunset | Fees:
-                                        none</small>
-                                </p>
-                            </div>
+    <!-- ======================================== -->
+    <!-- =============== Lake Balboa ============ -->
+    <!-- ======================================== -->
+    <div class="row">
+        <div class="col-8">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <button class="lake" value="91406" name="Lake Balboa">
+                            <img src="assets/images/lake-balboa.png" class="card-img" alt="Lake Balboa"
+                                id="lake-balboa" />
+                        </button>
+                    </div>
+                    <div class=" col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">
+                                Lake Balboa
+                            </h5>
+                            <p class="card-text ">
+                                Fish:
+                                <a href="https://en.wikipedia.org/wiki/Largemouth_bass"> largemouth bass </a>
+                                <a href="https://en.wikipedia.org/wiki/Common_carp"></a>
+                                <a href="
+                                    https://en.wikipedia.org/wiki/Channel_catfish"></a>
+
+                            </p>
+                            <p class="card-text ">
+                                <small class="text-muted ">San Fernando Valley |
+                                    Open Everyday: sunrise to
+                                    sunset | Fees:
+                                    none</small>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!------------------ DISPLAY FOR WEATHER OF LAKE SELECTED  ------------------------->
-            <!-- ============================================================================ -->
-            <!-- <div class="col-4" id="fixedLakeTemp">
+        <!-- =========== DISPLAY FOR WEATHER OF LAKE SELECTED  =========== -->
+        <!-- ============================================================= -->
+        <!-- <div class="col-4" id="fixedLakeTemp">
                 <h6 id="lakeName"></h6>
                 <p class="card-text " id="zipCodeTemperature"></p>
                 <p class="card-text" id="zipCodeDescription"></p>
             </div> -->
-        </div>
+    </div>
 
-        <!--------------- Lake  ------------------------------------------------------->
-        <!-- ================================================================================ -->
+    <!-- ======================================== -->
+    <!-- ============== Lake Matthews ============ -->
+    <!-- ======================================== -->
 
-        <div class="row ">
-            <div class="col-8 ">
-                <div class="card mb-3 " style="max-width: 540px; ">
-                    <div class="row no-gutters ">
-                        <div class="col-md-4 ">
-                            <button class="lake" value="92570" name="Lake Matthews">
-                                <img src="assets/images/lake-matthews.png " class="card-img" alt="Lake Matthews " />
-                            </button>
-                        </div>
-                        <div class="col-md-8 ">
-                            <div class="card-body ">
-                                <h5 class="card-title ">
-                                    Lake Matthews
-                                </h5>
-                                <p class="card-text ">
-                                    Fish: Largemouth bass,
-                                    Smallmouth bass, White bass,
-                                    Spotted bass, Walleye
-                                </p>
-                                <p class="card-text ">
-                                    Large water Reservoir (avg
-                                    depth 150ft)
-                                </p>
-                                <p class="card-text ">
-                                    The "Dam Park " is gated / NO
-                                    PUBLIC ACCESS
-                                </p>
-                                <p class="card-text ">
-                                    <small class="text-muted ">
-                                        Riverside County</small>
-                                </p>
-                            </div>
-                        </div>
+    <div class="row ">
+        <div class="col-8 ">
+            <div class="card mb-3 " style="max-width: 540px; ">
+                <div class="row no-gutters ">
+                    <div class="col-md-4 ">
+                        <button class="lake" value="92570" name="Lake Matthews">
+                            <img src="assets/images/lake-matthews.png " class="card-img" alt="Lake Matthews " />
+                        </button>
                     </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!--------------- Lake  ------------------------------------------------------->
-        <!-- ================================================================================ -->
-
-        <div class="row ">
-            <div class="col-8 ">
-                <div class="card mb-3 " style="max-width: 540px; ">
-                    <div class="row no-gutters ">
-                        <div class="col-md-4 ">
-                            <button class="lake" value="92570" name="Lake Perris">
-                                <img src="assets/images/lake-perris.png " class="card-img" alt="Lake Perris " />
-                            </button>
-                        </div>
-                        <div class="col-md-8 ">
-                            <div class="card-body ">
-                                <h5 class="card-title ">
-                                    Lake Perris
-                                </h5>
-                                <p class="card-text ">
-                                    Fish: Rainbow trout,
-                                    Largemouth bass, Spotted bass,
-                                    Channel catfish, Bluegill
-                                </p>
-                                <p class="card-text ">
-                                    Artificial Lake
-                                </p>
-                                <p class="card-text ">
-                                    <small class="text-muted ">Riverside County |
-                                        Fees:$10/vehicle</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!--------------- Lake  ------------------------------------------------------->
-        <!-- ================================================================================ -->
-
-        <div class="row ">
-            <div class="col-8">
-                <div class="card mb-3 " style="max-width: 540px; ">
-                    <div class="row no-gutters ">
-                        <div class="col-md-4 ">
-                            <button class="lake" value="92530" name="Lake Elsinore">
-                                <img src="assets/images/lake-elsinore.png " class="card-img" alt="Lake Elsinore " />
-                            </button>
-                        </div>
-                        <div class="col-md-8 ">
-                            <div class="card-body ">
-                                <h5 class="card-title ">
-                                    Lake Elsinore
-                                </h5>
-                                <p class="card-text ">
-                                    Fish: Black bass, Panfish,
-                                    Largemouth bass, White
-                                    crappie, Black crappie,
-                                    Bluegill, Channel catfish
-                                </p>
-                                <p class="card-text ">
-                                    Natural freshwater lake
-                                </p>
-                                <p class="card-text ">
-                                    <small class="text-muted ">western Riverside County
-                                        |
-                                        <br />
-                                        Hours for fishing:
-                                        6am-10pm(designated
-                                        areas)</small>
-                                </p>
-                            </div>
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title">
+                                Lake Matthews
+                            </h5>
+                            <p class="card-text ">
+                                Fish: Largemouth bass,
+                                Smallmouth bass, White bass,
+                                Spotted bass, Walleye
+                            </p>
+                            <p class="card-text ">
+                                Large water Reservoir (avg
+                                depth 150ft)
+                            </p>
+                            <p class="card-text ">
+                                The "Dam Park " is gated / NO
+                                PUBLIC ACCESS
+                            </p>
+                            <p class="card-text ">
+                                <small class="text-muted ">
+                                    Riverside County</small>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--------------- Lake  ------------------------------------------------------->
-        <!-- ================================================================================ -->
+    </div>
 
-        <div class="row ">
-            <div class="col-8 ">
-                <div class="card mb-3 " style="max-width: 540px; ">
-                    <div class="row no-gutters ">
-                        <div class="col-md-4 ">
-                            <button class="lake" value="92345" name="Silverwood Lake">
-                                <img src="assets/images/silverwood-lake.png " class="card-img"
-                                    alt="Silverwood Lakke " />
-                            </button>
+    <!-- ======================================== -->
+    <!-- =============== Lake Perris ============ -->
+    <!-- ======================================== -->
+
+    <div class="row ">
+        <div class="col-8 ">
+            <div class="card mb-3 " style="max-width: 540px; ">
+                <div class="row no-gutters ">
+                    <div class="col-md-4 ">
+                        <button class="lake" value="92570" name="Lake Perris">
+                            <img src="assets/images/lake-perris.png " class="card-img" alt="Lake Perris " />
+                        </button>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">
+                                Lake Perris
+                            </h5>
+                            <p class="card-text ">
+                                Fish: Rainbow trout,
+                                Largemouth bass, Spotted bass,
+                                Channel catfish, Bluegill
+                            </p>
+                            <p class="card-text ">
+                                Artificial Lake
+                            </p>
+                            <p class="card-text ">
+                                <small class="text-muted ">Riverside County |
+                                    Fees:$10/vehicle</small>
+                            </p>
                         </div>
-                        <div class="col-md-8 ">
-                            <div class="card-body ">
-                                <h5 class="card-title ">
-                                    Silverwood Lake
-                                </h5>
-                                <p class="card-text ">
-                                    Fish: Rainbow trout, Striped
-                                    bass, Largemouth bass, Channel
-                                    catfish, Bluegill
-                                </p>
-                                <p class="card-text ">
-                                    <small class="text-muted ">San Bernardino County |
-                                        Fees: $10 for
-                                        entry</small>
-                                </p>
-                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ======================================== -->
+    <!-- =============== Lake Elsinore ============ -->
+    <!-- ======================================== -->
+
+    <div class="row ">
+        <div class="col-8">
+            <div class="card mb-3 " style="max-width: 540px; ">
+                <div class="row no-gutters ">
+                    <div class="col-md-4 ">
+                        <button class="lake" value="92530" name="Lake Elsinore">
+                            <img src="assets/images/lake-elsinore.png " class="card-img" alt="Lake Elsinore " />
+                        </button>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">
+                                Lake Elsinore
+                            </h5>
+                            <p class="card-text ">
+                                Fish: Black bass, Panfish,
+                                Largemouth bass, White
+                                crappie, Black crappie,
+                                Bluegill, Channel catfish
+                            </p>
+                            <p class="card-text ">
+                                Natural freshwater lake
+                            </p>
+                            <p class="card-text ">
+                                <small class="text-muted ">western Riverside County
+                                    |
+                                    <br />
+                                    Hours for fishing:
+                                    6am-10pm(designated
+                                    areas)</small>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -315,25 +295,61 @@
         </div>
     </div>
 
+    <!-- ======================================== -->
+    <!-- ============== Silverwood Lake ============ -->
+    <!-- ======================================== -->
+
+    <div class="row ">
+        <div class="col-8 ">
+            <div class="card mb-3 " style="max-width: 540px; ">
+                <div class="row no-gutters ">
+                    <div class="col-md-4 ">
+                        <button class="lake" value="92345" name="Silverwood Lake">
+                            <img src="assets/images/silverwood-lake.png " class="card-img" alt="Silverwood Lakke " />
+                        </button>
+                    </div>
+                    <div class="col-md-8 ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">
+                                Silverwood Lake
+                            </h5>
+                            <p class="card-text ">
+                                Fish: Rainbow trout, Striped
+                                bass, Largemouth bass, Channel
+                                catfish, Bluegill
+                            </p>
+                            <p class="card-text ">
+                                <small class="text-muted ">San Bernardino County |
+                                    Fees: $10 for
+                                    entry</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <!-- Link to jQuery  -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
 
-    <!-- Link to Moment.js  -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js "></script>
-
-    <!--MY JAVASCRIPT-->
-    <script type="text/javascript " src="assets/javascript/script.js"></script>
-
-    <!-- BOOTSTRAP 'S: Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js "
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin=" anonymous "></script>
+    <!-- BOOTSTRAP'S: Optional JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
         crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 "
         crossorigin="anonymous "></script>
+
+    <!-- Link to Moment.js  -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js "></script>
+
+    <!-- Link to animejs -->
+    <script src="anime.min.js"></script>
+
+    <!--MY JAVASCRIPT-->
+    <script type="text/javascript " src="assets/javascript/script.js"></script>
 </body>
 
 </html>

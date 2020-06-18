@@ -1,4 +1,4 @@
-
+// const anime = require('animejs');
 const zipcodeForecastAPIkey = "7c503c0e58d64fcc85af4093549c4a07";
 let zipcode = 0;
 let apiCall;

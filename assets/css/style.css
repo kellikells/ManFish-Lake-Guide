@@ -59,6 +59,14 @@ h1 {
 
 
 p {
-     font-size: 2rem;
+     font-size: 1rem;
      color: #4bc;
+}
+
+ /* each lake */
+.card-title {
+     text-align: right;
+     background-color: #eff;
+     font-size: 2rem;
+
 }
