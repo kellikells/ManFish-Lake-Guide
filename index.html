@@ -29,9 +29,12 @@
 
     <!--------------- MY CSS --------------->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+ 
 </head>
 
 <body>
+
 
     <!-- =========== HEADER =========== -->
     <div class="container-fluid" id="MYcontainer">
@@ -39,9 +42,9 @@
             <div class="col">
                 <div class="jumbotron jumbotron-fluid" id="MYjumbotron">
                     <div class="container">
-                        <h1 class="display-4">
+                        <h2 class="display-4 ml2" id="title">
                             Fish Man's Lake Guide
-                        </h1>
+                        </h2>
                         <p class="lead" id="subhead">
                             current weather & lake information
                         </p>
@@ -118,13 +121,11 @@
             </div>
         </div>
     </div>
-    
-    <br>
-    <!-- weather for clicked lake  -->
-
 
     <br>
+    <br>
 
+    <div class="container" id="lakeContainer">
     <!-- ======================================== -->
     <!-- =============== Lake Balboa ============ -->
     <!-- ======================================== -->
@@ -162,15 +163,15 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- =========== DISPLAY FOR WEATHER OF LAKE SELECTED  =========== -->
-        <!-- ============================================================= -->
-        <!-- <div class="col-4" id="fixedLakeTemp">
+    <!-- =========== DISPLAY FOR WEATHER OF LAKE SELECTED  =========== -->
+    <!-- ============================================================= -->
+    <!-- <div class="col-4" id="fixedLakeTemp">
                 <h6 id="lakeName"></h6>
                 <p class="card-text " id="zipCodeTemperature"></p>
                 <p class="card-text" id="zipCodeDescription"></p>
             </div> -->
-    </div>
 
     <!-- ======================================== -->
     <!-- ============== Lake Matthews ============ -->
@@ -296,7 +297,7 @@
     </div>
 
     <!-- ======================================== -->
-    <!-- ============== Silverwood Lake ============ -->
+    <!-- ============ Silverwood Lake =========== -->
     <!-- ======================================== -->
 
     <div class="row ">
@@ -330,6 +331,7 @@
         </div>
     </div>
     </div>
+    </div>
 
     <!-- Link to jQuery  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
@@ -347,9 +349,12 @@
 
     <!-- Link to animejs -->
     <script src="anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <!--MY JAVASCRIPT-->
+        <script type="text/javasript" src="assets/javascript/animation.js"></script>
     <script type="text/javascript " src="assets/javascript/script.js"></script>
+
 </body>
 
 </html>

@@ -1,10 +1,6 @@
-* {
-     box-sizing: border-box;
-}
-
 body {
-         /* background-image: url("../images/geometric-leaves.png"); */
-         background-color: #124;
+     box-sizing: border-box;
+     background-color: #124;
 }
 
 /* ------------------------------------------*/
@@ -14,27 +10,31 @@ body {
 /* my wrapper for content  */
 
 #MYcontainer {
-     padding: 20px;
+     /* padding: 20px; */
      margin-top: 10px;
-     margin-bottom: 50px;
+     margin-bottom: 20px;
      background-color: #9ef;
      border: solid 3px black;
 }
+.container{
+    margin-bottom: 10px;
+}
 
+
+/* HEADER  */
+/* ------------------------------------------*/
 #MYjumbotron {
+     margin-top: 20px;
      padding: 20px 0 5px 0;
      text-align: center;
      border: double 10px white;
      background-color: #4bc;
 }
-
-/* jumbotron header  */
-
-h1 {
+#title {
      font-family: "Rock Salt", cursive;
      color: white;
+     size: 4.5rem;
 }
-
 #subhead {
      color: whitesmoke;
      font-family: "Sriracha", cursive;
@@ -44,7 +44,9 @@ h1 {
      font-size: 1.5rem;
 }
 
+
 /* Submit button for zipcode Input  */
+/* ------------------------------------------*/
 .weatherSubmit {
      background-color: #4bc;
      border: none;
@@ -52,21 +54,63 @@ h1 {
      font-size: 1rem;
 }
 
-/* weather result cards */
+
+/* WEATHER RESULT CARDS  */
+/* ------------------------------------------*/
+h5.weather-title {
+    text-align: center;
+}
 .result {
      text-align: center;
 }
-
-
 p {
      font-size: 1rem;
      color: #4bc;
 }
 
- /* each lake */
+/* each lake */
+/* ------------------------------------------*/
 .card-title {
      text-align: right;
-     background-color: #eff;
+     background-color: #4bc;
      font-size: 2rem;
-
+     opacity: .75;
 }
+
+
+
+
+/*****library****/
+.ml2 {
+     font-size: 1.5em;
+}
+
+.ml2 .letter {
+     display: inline-block;
+     line-height: 1em;
+}
+
+#instructions {
+     font-size: 1em;
+}
+/***************/
+  @media only screen and (min-width: 600px) {
+    #currentInfo{
+        position: fixed;
+        top:20px;
+        right: 30px;
+    }
+
+    #logo{
+        border-bottom: 1px dotted #ccc;
+        padding: 10px 0px;
+        text-align: left;
+    }
+
+    .ml2 {
+        font-size: 2.5em;
+      }
+      #instructions{
+          font-size:1.5em;
+      }
+  }
